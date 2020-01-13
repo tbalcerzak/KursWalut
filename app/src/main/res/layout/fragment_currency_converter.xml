@@ -10,11 +10,13 @@
         android:layout_height="100dp"
         android:layout_alignEnd="@+id/button"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="-14dp"
-        android:src="@drawable/ic_money_foreground"
         android:layout_alignRight="@+id/button"
-        android:layout_marginRight="-14dp" />
+        android:layout_marginEnd="-31dp"
+        android:layout_marginRight="-31dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/ic_money_foreground" />
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"

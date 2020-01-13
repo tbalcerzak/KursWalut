@@ -1,7 +1,6 @@
 package pl.kurswalut;
 
 import android.app.Activity;
-import android.inputmethodservice.Keyboard;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,7 +11,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -88,7 +86,6 @@ public class CurrencyConverterFragment extends Fragment {
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        //Toast.makeText(MainActivity.this, mMessage, Toast.LENGTH_SHORT).show();
                         try {
                             JSONObject obj = new JSONObject(mMessage);
                             JSONObject b = obj.getJSONObject("rates");
@@ -130,7 +127,10 @@ public class CurrencyConverterFragment extends Fragment {
         btnConvert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                hideSoftKeyboard(getActivity());
+                try {
+                    hideSoftKeyboard(getActivity());
+                }catch (Exception e){}
+
                 if (!edtPLNValue.getText().toString().isEmpty()) {
                     String toCurr = toCurrency.getSelectedItem().toString();
                     double plnVlaue = Double.valueOf(edtPLNValue.getText().toString());
@@ -162,8 +162,6 @@ public class CurrencyConverterFragment extends Fragment {
                 .header("Content-Type", "application/json")
                 .build();
 
-
-
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Request request, IOException e) {
@@ -178,14 +176,12 @@ public class CurrencyConverterFragment extends Fragment {
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        //Toast.makeText(MainActivity.this, mMessage, Toast.LENGTH_SHORT).show();
                         try {
                             JSONObject obj = new JSONObject(mMessage);
                             JSONObject  b = obj.getJSONObject("rates");
                             String val = b.getString(toCurr);
                             double output = plnValue*Double.valueOf(val);
                             textView.setText(String.valueOf(output));
-
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

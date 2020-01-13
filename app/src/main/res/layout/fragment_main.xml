@@ -11,18 +11,40 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="260dp"
         android:text="Log in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="161dp" />
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:background="@color/colorPrimary"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignEnd="@+id/button"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/button"
+        android:src="@drawable/ic_money_foreground"
+        app:layout_constraintBottom_toTopOf="@+id/biometric_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="260dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="90dp"
         android:gravity="center"
         android:paddingTop="20dp"
         android:text="Biometric login for my app"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toTopOf="@+id/biometric_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

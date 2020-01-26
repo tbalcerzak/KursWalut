@@ -17,48 +17,52 @@
         android:background="@color/colorPrimary"
         android:src="@drawable/ic_money_foreground" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+
+    <EditText
+        android:id="@+id/fromCurrencyValue"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="41dp"
         android:layout_marginLeft="41dp"
         android:layout_marginTop="164dp"
-        android:text="PLN" />
 
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_centerHorizontal="true"
-
-        android:layout_marginBottom="-16dp"
         android:ems="10"
         android:inputType="number" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:layout_toRightOf="@id/toValue"
+        android:id="@+id/fromCurrencySpinner"
+        android:layout_width="158dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView4"
+        android:layout_alignBottom="@+id/fromCurrencyValue"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="23dp"
+        android:background="@color/colorAccent" />
+
+    <EditText
+        android:id="@+id/toValue"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/fromCurrencyValue"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="231dp"
-        android:text="Curency" />
-
+         />
 
     <Spinner
-        android:background="@color/biometric_error_color"
-        android:id="@+id/planets_spinner"
-        android:layout_width="238dp"
+        android:layout_toRightOf="@id/toValue"
+        android:id="@+id/toSpinner"
+        android:layout_width="158dp"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView5"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="1dp" />
+        android:layout_alignTop="@+id/toValue"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorAccent" />
 
     <Button
         android:id="@+id/button"
@@ -73,7 +77,7 @@
         android:text="Converte" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/aktualnyKurs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -81,6 +85,20 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="51dp"
         android:layout_marginLeft="51dp"
+ android:layout_marginBottom="173dp"
+        android:text="Aktualny Kurs" />
+
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="51dp"
+ android:layout_marginLeft="51dp"
         android:layout_marginBottom="113dp"
         android:text="Value" />
 
@@ -91,7 +109,7 @@
         android:layout_alignTop="@+id/textView6"
         android:layout_marginStart="44dp"
         android:layout_marginTop="0dp"
-        android:layout_toEndOf="@+id/textView5"
+        android:layout_toEndOf="@+id/toValue"
         android:text="0" />
 
 </RelativeLayout>

@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, new MainActivityFragment()).commit();
+        // ustawiam pierwszy fragment
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new LoginActivityFragment()).commit();
     }
 
 }

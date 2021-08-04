@@ -1,1 +1,3 @@
 # KursWalut
+
+Test text init

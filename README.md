@@ -1,3 +1,3 @@
 # KursWalut
 
-Test text init - FIRST BRANCH
+Test text init - SECOND BRANCH

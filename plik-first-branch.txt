@@ -1,2 +1,7 @@
 first branch
 And third-branch
+<<<<<<< Updated upstream
+Stash dwa 
+=======
+Zmiana na potrzeby stash
+>>>>>>> Stashed changes

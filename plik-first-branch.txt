@@ -2,5 +2,6 @@
 And third-branch
 Zmiana na potrzeby stash
 Dupa feature-b master zmiana koloru
+<p> coś tam feature-c
 
 

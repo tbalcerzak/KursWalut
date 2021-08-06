@@ -4,4 +4,4 @@ And third-branch
 Stash dwa 
 =======
 Zmiana na potrzeby stash
->>>>>>> Stashed changes
+Dupa

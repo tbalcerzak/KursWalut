@@ -1,5 +1,6 @@
  first branch
 And third-branch
 Zmiana na potrzeby stash
-Dupa master zmiana koloru
+Dupa feature-b master zmiana koloru
+
 

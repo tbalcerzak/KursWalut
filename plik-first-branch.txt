@@ -4,3 +4,4 @@ Zmiana na potrzeby stash
 Dupa feature-b master zmiana koloru
 <p> zapraszam na discorda</p>
 <p> coś tam feature-c
+Ala ma kota
